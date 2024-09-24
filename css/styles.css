@@ -1,7 +1,17 @@
 header {
     display: flex;
-  }
-  .heading-info {
+}
+.heading-info {
     padding-left: 2vw;
-  }
+  
+}
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-item {
+    text-decoration:
+}
 
