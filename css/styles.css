@@ -1,17 +1,120 @@
-header {
-    display: flex;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.heading-info {
-    padding-left: 2vw;
-  
+
+body {
+    background-image: url("../assets/bg-physics.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/**** Grand container and other universal***/
+.grand-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/***Header***/
+.nav-bar {
+    background-color: rgba(11, 11, 11, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding: 45px 10px 0px 10px;
+    color: rgb(235, 233, 244);
 }
 .nav-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    padding-top: 30px;
+    font-size:1.3rem;
+}
+h1 {
+    text-align: center;
+    border: 2px solid rgb(232, 231, 238);
+    padding: 15px 10px 15px 10px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+h1 > span {
+    font-weight: normal;
+}
+header > p {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px 20px 0 20px;
+}
+.nav-list p {
+    border-top: 1px solid rgb(232, 231, 238);
+    padding: 20px 0 20px 0;
+}
+
+/***header-links-decoration***/
+header a:hover h1, .nav-item > a:hover p {
+    background-color: rgba(108, 108, 125, 0.8);
+}
+
+
+
+
+/*** MAIN BODY ***/
+.main-body {
+    margin-top: 45px;
+    margin-right: 5vw;
+    padding: 10px 0 0 10px;
+    background-color: rgba(255, 253, 235, 0.8);
+    border-top: 5px solid rgb(241, 180, 65);
+}
+.top-header {
+    display: flex;
+    gap: 20px;
+}
+.top-header>div>img {
+    
+}
+
+ul {
     list-style: none;
 }
-.nav-item {
-    text-decoration:
+
+
+/*** Box sizing ***/
+.col-shift-5 {
+    flex-basis: calc(100%/12 + 5%);
+}
+
+/*** Large devices***/
+@media (min-width: 992px) {
+    .grand-container {
+        gap: 8vw;
+    }
+
+
+
+    /*** sizes ***/
+    .col-ld-1 {flex-basis: 8.33%;}
+    .col-ld-2 {flex-basis: 16.67%;}
+    .col-ld-3 {flex-basis: 25%;}
+    .col-ld-4 {flex-basis: 33.33%;}
+    .col-ld-5 {flex-basis: 41.67%;}
+    .col-ld-6 {flex-basis: 50%;}
+    .col-ld-7 {flex-basis: 58.33%;}
+    .col-ld-8 {flex-basis: 66.67%;}
+    .col-ld-9 {flex-basis: 75%;}
+    .col-ld-10 {flex-basis: 83.33%;}
+    .col-ld-11 {flex-basis: 91.67%;}
+    .col-ld-12 {flex-basis: 100%}
 }
 
