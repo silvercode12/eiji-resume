@@ -161,6 +161,15 @@ ul {
 .skills p {
     text-align: left;
 }
+/*** main-body-experience ***/
+.experience p {
+    padding-bottom: 5px;
+
+}
+.experience ul {
+    list-style: circle;
+    margin-left: 5px;
+}
 
 /*** Main-body-deco***/
 .summary > section > a:hover h2 {
