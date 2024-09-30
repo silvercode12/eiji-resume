@@ -109,6 +109,11 @@ header a:hover h1, .nav-item > a:hover p {
     padding-top: 10px
 }
 /*** MAIN BODY - summary ***/
+.summary {
+    margin-top: 5vw;
+    display: flex;
+    gap: 10px;
+}
 ul {
     list-style: none;
 }
@@ -129,30 +134,42 @@ ul {
 .summary section ul {
     padding: 10px 20px 10px 20px;
     text-align: justify;
-    letter-spacing: 0.3px;
 }
-.summary img {
-    text-align: center;
+.summary section ul {
+    font-weight: bold;
 }
 
 /*** main-body-education ***/
 .info-university, .info-secondary, .info-tertiary {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     gap:10px;
     padding-bottom: 10px;
 }
+.info-tertiary {
+    margin-left: -7px;
+}
+.info-u-logo1 {
+    background-image: url("../assets/DLSU-logo.png");
+    width: 40%;
+    aspect-ratio: 1/1;
 
+}
+.info-s-logo1 {
+    background-image: url("../assets/shekinah-logo.jfif");
+    width: 35% !important;
+    aspect-ratio: 1/1;
+}
+.info-t-logo1 {
+    background-image: url("../assets/sisc-logo.png");
+    margin-left:
+}
 .edu-logo {
     background-size: contain;
     background-repeat: no-repeat;
     width: 40%;
     aspect-ratio: 1/1;
-}
-/*** main-body-skills ***/
-.skills ul {
-    list-style:circle;
-    margin-left: 5px;
 }
 
 /*** Main-body-deco***/
@@ -169,16 +186,9 @@ ul {
         gap: 8vw;
     }
     .summary {
-        margin-top: 5vw;
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr 300px;
-        grid-template-rows: auto;
-        
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
-    .education {grid-column: 1 / span 2; grid-row: 1;}
-    .experience {grid-column: 1 / span 2; grid-row: 2;}
-    .skills {grid-column: 3; grid-row: 1 / span 4;}
     
 
     /*** sizes ***/
