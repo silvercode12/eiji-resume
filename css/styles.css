@@ -24,7 +24,9 @@ h2 {
 a {
     text-decoration: none;
 }
-a:visited,a:link {
+
+
+a:visited {
     text-decoration: none;
     color: inherit;
 }
@@ -35,25 +37,14 @@ a:visited,a:link {
     background-color: rgba(11, 11, 11, 0.8);
     display: flex;
     flex-direction: column;
-    padding: 35px 10px 0px 10px;
+    padding: 45px 10px 0px 10px;
     color: rgb(235, 233, 244);
-}
-.nav-bar > div {
-    padding-top: 10px;
-    position: sticky;
-    top: 0;
-}
-.nav-list-container {
-    padding-top: 5vw;
-
-}
-.nav-list-container > p {
-    font-size: 0.8rem;
 }
 .nav-list {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 5vw;
     font-size:1.3rem;
 }
 h1 {
@@ -62,7 +53,6 @@ h1 {
     padding: 15px 10px 15px 10px;
     font-size: 1.8rem;
     letter-spacing: 2px;
-    transition: background-color 0.3s ease;
 }
 h1 > span {
     font-weight: normal;
@@ -76,13 +66,13 @@ header > p {
     border-top: 1px solid rgb(232, 231, 238);
     padding: 20px 0 20px 0;
     letter-spacing: 1px;
-    transition: background-color 0.3s ease;
 }
 
 /***header-links-decoration***/
 header a:hover h1, .nav-item > a:hover p {
     background-color: rgba(108, 108, 125, 0.8);
 }
+
 
 
 
@@ -93,7 +83,6 @@ header a:hover h1, .nav-item > a:hover p {
     padding: 5vw 3vw 0 3vw;
     background-color: rgba(255, 253, 235, 0.7);
     border-radius: 50px;
-    color: rgb(18, 18, 18)
 }
 .top-header {
     display: flex;
@@ -113,67 +102,12 @@ header a:hover h1, .nav-item > a:hover p {
     padding-top: 10px
 }
 /*** MAIN BODY - summary ***/
+.summary {
+    margin-top: 5vw;
+    display: grid;
+}
 ul {
     list-style: none;
-}
-.summary section {
-    border-right: 2px solid rgb(1,1,1,.5);
-    border-left: 2px solid rgb(1,1,1,.5);
-    border-bottom: 4px solid rgb(111, 255, 188);
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-.summary h2 {
-    text-align: center;
-    background-color: rgb(111, 255, 188);
-    border-radius: 40px;
-    padding: 10px; 
-    transition: background-color 0.3s ease;
-}
-.summary section ul {
-    padding: 10px 20px 10px 20px;
-    text-align: justify;
-    letter-spacing: 0.3px;
-}
-.summary img {
-    text-align: center;
-}
-
-/*** main-body-education ***/
-.info-university, .info-secondary, .info-tertiary {
-    display: flex;
-    flex-direction: row;
-    gap:10px;
-    padding-bottom: 10px;
-}
-
-.edu-logo {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 40%;
-    aspect-ratio: 1/1;
-}
-/*** main-body-skills ***/
-.skills ul {
-    list-style:circle;
-    margin-left: 5px;
-}
-.skills p {
-    text-align: left;
-}
-/*** main-body-experience ***/
-.experience p {
-    padding-bottom: 5px;
-
-}
-.experience ul {
-    list-style: circle;
-    margin-left: 5px;
-}
-
-/*** Main-body-deco***/
-.summary > section > a:hover h2 {
-    background-color: rgb(64, 179, 125)
 }
 
 
@@ -185,17 +119,21 @@ ul {
         gap: 8vw;
     }
     .summary {
-        margin-top: 5vw;
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr 300px;
-        grid-template-rows: auto;
-        
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas:
+        "a b"
+        "c d"
+        "e f"
     }
-    .education {grid-column: 1 / span 2; grid-row: 1;}
-    .experience {grid-column: 1 / span 2; grid-row: 2;}
-    .skills {grid-column: 3; grid-row: 1 / span 4;}
-    
+    .a {grid-area: a;}
+    .b {grid-area: b;}
+    .c {grid-area: c;}
+    .d {grid-area: d;}
+    .e {grid-area: e;}
+    .f {grid-area: f;}
+
+
 
     /*** sizes ***/
     .col-ld-1 {flex-basis: 8.33%;}
